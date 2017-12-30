@@ -10,3 +10,11 @@
 * **It should have a** function to add todos
 * **It should have a** function to change todos
 * **It should have a** function to delete todos
+
+# V3 Requirements
+*Put everything up to now onto an object, and that object represents a todo list.*
+* **It should** store the todos array on an object.
+* **It should have a** displayTodos method.
+* **It should have an** addTodo method.
+* **It hsould have a** changeTodo method.
+* **It should have a** deleteTodo method.
