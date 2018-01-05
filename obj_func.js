@@ -3,13 +3,24 @@
 //   name: "Tommy",
 //   sayName: function() {
 //     console.log(this.name);
-//   }
+//   } // this is called a method
 // }
 
 var todoList = {
   todos: [],
   displayTodos: function() {
-    console.log("My Todos:", this.todos);
+    if (this.todos.length === 0) {
+      console.log("What's next?");
+    } else {
+      console.log("My Todos:");
+      for (var i = 0; i < this.todos.length; i++) {
+        if (this.todos[i].completed === true) {
+          console.log("[X]", this.todos[i].todoText);
+        } else {
+          console.log("[ ]", this.todos[i].todoText);
+        }
+      }
+    }
   },
 
   addTodo: function(todoText) {
@@ -26,8 +37,8 @@ var todoList = {
   },
 
   toggleCompleted: function(position) {
-    var todo = this.todos[position];
-    todo.completed = !todo.completed; // SAME AS this.todos[position].completed = !this.todos[position].completed;
+    var toggle = this.todos[position];
+    toggle.completed = !toggle.completed; // SAME AS this.todos[position] = !this.todos[position]; // method (completed) shouldn't be saved in variable expression
     this.displayTodos();
   },
 

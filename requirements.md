@@ -23,3 +23,8 @@
 * todoList.addTodo should add objects.
 * todoList.changeTodo should change the todo Text property.
 * todoList.toggleCompleted should change the completed property.
+
+#V5 Requirements
+* **.displayTodos should** show .todoText
+* **.displayTodos should** tell you if .todos is empty
+* **.displayTodos should** show .completed
