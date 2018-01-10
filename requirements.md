@@ -16,7 +16,7 @@
 * **It should** store the todos array on an object.
 * **It should have a** displayTodos method.
 * **It should have an** addTodo method.
-* **It hsould have a** changeTodo method.
+* **It should have a** changeTodo method.
 * **It should have a** deleteTodo method.
 
 #V4 Requirements
@@ -28,3 +28,7 @@
 * **.displayTodos should** show .todoText
 * **.displayTodos should** tell you if .todos is empty
 * **.displayTodos should** show .completed
+
+#V6 Requirements
+* **.toggleAll:** If everything's true, make everything false.
+* **.toggleAll:** Otherwise, make everything true.
