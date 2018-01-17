@@ -1,0 +1,44 @@
+html {
+  font: 16px Helvetica, Arial, sans-serif; }
+
+.btn {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font: 1rem Helvetica, Arial, sans-serif;
+  letter-spacing: 0.03125em;
+  padding: 1em 2em;
+  transition: all 200ms ease; }
+
+.btn_primary {
+  border: 2px solid #000; }
+  .btn_primary:hover {
+    background-color: #000080;
+    border-color: #000080;
+    color: #fff; }
+
+.btn_secondary {
+  background-color: #000;
+  border: 2px solid #000;
+  color: #fff; }
+  .btn_secondary:hover {
+    background-color: #00FF7F;
+    border-color: #00FF7F;
+    color: #000; }
+
+main header {
+  padding: 2.5em 2.5em 0; }
+  main header h1 {
+    font-size: 3rem; }
+
+main section:first-of-type {
+  margin: 2.5em; }
+  main section:first-of-type button:first-of-type {
+    margin-right: 0.5em; }
+  main section:first-of-type button:last-of-type {
+    margin-left: 0.5em; }
+    main section:first-of-type button:last-of-type:hover {
+      background-color: #00FF7F;
+      border-color: #00FF7F; }
