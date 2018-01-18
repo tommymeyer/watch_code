@@ -12,9 +12,23 @@
       <h1>Todo List</h1>
     </header>
 
-    <section class="buttons">
-      <button class="btn btn_primary" id="displayTodosBtn">Display Todos</button>
-      <button class="btn btn_secondary" id="toggleAllBtn">Toggle All</button>
+    <section>
+      <button class="btn btn_primary" onclick="handlers.displayTodos()">Display Todos</button>
+      <button class="btn btn_secondary" onclick="handlers.toggleAll()">Toggle All</button>
+    </section>
+
+    <section>
+      <input type="text" id="add-todo-text-input">
+
+      <button class="btn btn_primary" onclick="handlers.addTodo()">Add Todo</button>
+    </section>
+
+    <section>
+      <input id="change-todo-position-input" type="number">
+
+      <input id="change-todo-text-input" type="text">
+
+      <button class="btn btn_secondary" onclick="handlers.changeTodo()">Change Todo</button>
     </section>
   </main>
 

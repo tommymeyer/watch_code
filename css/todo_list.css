@@ -25,20 +25,29 @@ html {
   color: #fff; }
   .btn_secondary:hover {
     background-color: #00FF7F;
-    border-color: #00FF7F;
-    color: #000; }
+    border-color: #00FF7F; }
+
+input {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1.25em;
+  padding: 0.5em; }
 
 main header {
   padding: 2.5em 2.5em 0; }
   main header h1 {
     font-size: 3rem; }
 
-main section:first-of-type {
-  margin: 2.5em; }
-  main section:first-of-type button:first-of-type {
+main section {
+  margin: 2.5em 2.5em 4em; }
+  main section button:first-of-type {
     margin-right: 0.5em; }
-  main section:first-of-type button:last-of-type {
+  main section button:last-of-type {
     margin-left: 0.5em; }
-    main section:first-of-type button:last-of-type:hover {
-      background-color: #00FF7F;
-      border-color: #00FF7F; }
+  main section:nth-of-type(2) button {
+    margin-left: 0; }
+  main section:nth-of-type(3) input {
+    display: inline-block; }
+  main section:nth-of-type(3) button {
+    display: block;
+    margin-left: 0; }

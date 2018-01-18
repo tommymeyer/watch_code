@@ -1,6 +1,6 @@
 var todoList = {
   todos: [],
-  displayTodos: function () {
+  displayTodos: function() {
     if (this.todos.length === 0) {
       console.log("What's next?");
     } else {
@@ -15,7 +15,7 @@ var todoList = {
     }
   },
 
-  addTodo: function (todoText) {
+  addTodo: function(todoText) {
     this.todos.push({
       todoText: todoText,
       completed: false
@@ -23,23 +23,23 @@ var todoList = {
     this.displayTodos();
   },
 
-  changeTodo: function (position, todoText) {
+  changeTodo: function(position, todoText) {
     this.todos[position].todoText = todoText;
     this.displayTodos();
   },
 
-  toggleCompleted: function (position) {
+  toggleCompleted: function(position) {
     var toggle = this.todos[position];
     toggle.completed = !toggle.completed; // SAME AS this.todos[position] = !this.todos[position]; // method (completed) shouldn't be saved in variable expression
     this.displayTodos();
   },
 
-  deleteTodo: function (position) {
+  deleteTodo: function(position) {
     this.todos.splice((position), 1);
     this.displayTodos();
   },
 
-  toggleAll: function () {
+  toggleAll: function() {
     var totalTodos = this.todos.length;
     var completedTodos = 0;
 
@@ -64,13 +64,31 @@ var todoList = {
   }
 };
 
-var displayTodosBtn = document.getElementById("displayTodosBtn");
-var toggleAllBtn = document.getElementById("toggleAllBtn");
+// Called handlers because we want this object to hold functions that will handle different events.
+var handlers = {
+  displayTodos: function() {
+    todoList.displayTodos();
+  },
 
-displayTodosBtn.addEventListener("click", function () {
-  todoList.displayTodos();
-});
+  toggleAll: function() {
+    todoList.toggleAll();
+  },
 
-toggleAllBtn.addEventListener("click", function () {
-  todoList.toggleAll();
-});
+  addTodo: function() {
+    var addTodoTextInput = document.getElementById("add-todo-text-input");
+
+    todoList.addTodo(addTodoTextInput.value);
+
+    addTodoTextInput.value = "";
+  },
+
+  changeTodo: function() {
+    var changeTodoPositionInput = document.getElementById("change-todo-position-input");
+    var changeTodoTextInput = document.getElementById("change-todo-text-input");
+
+    todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+
+    changeTodoPositionInput.value = "";
+    changeTodoTextInput.value = "";
+  }
+};
