@@ -66,12 +66,12 @@ var todoList = {
 
 // Called handlers because we want this object to hold functions that will handle different events.
 var handlers = {
-  displayTodos: function() {
-    todoList.displayTodos();
+  inputReset: function(reset) {
+    reset.value = "";
   },
 
-  toggleAll: function() {
-    todoList.toggleAll();
+  displayTodos: function() {
+    todoList.displayTodos();
   },
 
   addTodo: function() {
@@ -79,7 +79,7 @@ var handlers = {
 
     todoList.addTodo(addTodoTextInput.value);
 
-    addTodoTextInput.value = "";
+    this.inputReset(addTodoTextInput);
   },
 
   changeTodo: function() {
@@ -88,7 +88,27 @@ var handlers = {
 
     todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
 
-    changeTodoPositionInput.value = "";
-    changeTodoTextInput.value = "";
+    this.inputReset(changeTodoPositionInput);
+    this.inputReset(changeTodoTextInput);
+  },
+
+  deleteTodo: function() {
+    var deleteTodoPositionInput = document.getElementById("delete-todo-position-input");
+
+    todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+
+    this.inputReset(deleteTodoPositionInput);
+  },
+
+  toggleCompleted: function() {
+    var toggleCompletedPositionInput = document.getElementById("toggle-completed-position-input");
+
+    todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+
+    this.inputReset(toggleCompletedPositionInput);
+  },
+
+  toggleAll: function () {
+    todoList.toggleAll();
   }
 };

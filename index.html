@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/todo_list.css">
 </head>
 <body>
+  
   <main>
     <header>
       <h1>Todo List</h1>
@@ -24,11 +25,24 @@
     </section>
 
     <section>
-      <input id="change-todo-position-input" type="number">
-
-      <input id="change-todo-text-input" type="text">
+      <section>
+        <input id="change-todo-position-input" type="number">
+        
+        <input id="change-todo-text-input" type="text">
+      </section>
 
       <button class="btn btn_secondary" onclick="handlers.changeTodo()">Change Todo</button>
+    </section>
+
+    <section>
+      <input type="number" id="toggle-completed-position-input">
+      <button class="btn btn_secondary" onclick="handlers.toggleCompleted()">Toggle Completed</button>
+    </section>
+
+    <section>
+      <input type="number" id="delete-todo-position-input">
+
+      <button class="btn btn_delete" onclick="handlers.deleteTodo()">Delete Todo</button>
     </section>
   </main>
 
