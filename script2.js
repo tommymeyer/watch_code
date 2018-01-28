@@ -18,7 +18,6 @@ var todoList = {
   },
 
   addTodo: function(todoText) {
-    debugger;
     // Every item in the todos array is an object that has text as well as a boolean state for determining completeness.
     this.todos.push({
       todoText: todoText,
