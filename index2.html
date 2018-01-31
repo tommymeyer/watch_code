@@ -9,36 +9,41 @@
     <h1>My Todos</h1>
   </header>
 
-  <section>
-    <button class="btn btn_primary" id="display-todos-btn" onclick="handlers.displayTodos()">Display Todos</button>
-  </section>
-  
-  <section>
-    <input type="text" name="Add Todo" id="add-todo-text" />
+  <main>
+    <section>
+      <input type="text" name="Add Todo" id="add-todo-text" />
+    
+      <button class="btn btn_primary" id="add-todo-btn" onclick="handlers.addTodo()">Add Todo</button>
+    </section>
+    
+    <section>
+      <input type="number" name="Change Todo Position" id="change-todo-position" />
+      <input type="text" name="Change Todo Text" id="change-todo-text" />
+    
+      <button id="change-todo-btn" class="btn btn_secondary" onclick="handlers.changeTodo()">Change Todo</button>
+    </section>
+    
+    <section>
+      <input type="number" name="Toggle Completed" id="toggle-completed-position" />
+    
+      <button class="btn btn_primary" id="toggle-completed-btn" onclick="handlers.toggleCompleted()">Toggle Completed</button>
+    
+      <button class="btn btn_secondary" id="toggle-all-btn" onclick="handlers.toggleAll()">Toggle All</button>
+    </section>
+    
+    <section>
+      <input type="number" name="Delete Todo Position" id="delete-todo-position" />
+    
+      <button class="btn btn_delete" id="delete-todo-btn" onclick="handlers.deleteTodo()"> Delete Todo</button>
+    </section>
+    
+    <section>
+      <h3></h3>
 
-    <button class="btn btn_primary" id="add-todo-btn" onclick="handlers.addTodo()">Add Todo</button>
-  </section>
-
-  <section>
-    <input type="number" name="Change Todo Position" id="change-todo-position" />
-    <input type="text" name="Change Todo Text" id="change-todo-text" />
-
-    <button id="change-todo-btn" class="btn btn_secondary" onclick="handlers.changeTodo()">Change Todo</button>
-  </section>
-
-  <section>
-    <input type="number" name="Toggle Completed" id="toggle-completed-position" />
-
-    <button class="btn btn_primary" id="toggle-completed-btn" onclick="handlers.toggleCompleted()">Toggle Completed</button>
-
-    <button class="btn btn_secondary" id="toggle-all-btn" onclick="handlers.toggleAll()">Toggle All</button>
-  </section>
-
-  <section>
-    <input type="number" name="Delete Todo Position" id="delete-todo-position" />
-
-    <button class="btn btn_delete" id="delete-todo-btn" onclick="handlers.deleteTodo()"> Delete Todo</button>
-  </section>
+      <ul>
+      </ul>
+    </section>
+  </main>
 
   <script type="text/javascript" src="script2.js"></script>
 </body>
