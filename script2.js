@@ -99,22 +99,21 @@ var handlers = {
 
 
 var view = {
-  displayTodos: function () {
+  displayTodos: function() {
     var todosUl = document.querySelector("ul"),
         todosH3 = document.querySelector("h3");
 
-    todosUl.innerHTML = "";
+    todosUl.textContent = "";
 
     if (todoList.todos.length === 0) {
-      todosH3.textContent = "What's next?";
+      todosH3.textContent = "\"What's next?\" ~ President Josiah Bartlet";
     } else {
-      todosH3.textContent = "The List"
+      todosH3.textContent = "The List";
     }
 
     for (var i = 0; i < todoList.todos.length; i++) {
       var todoLi = document.createElement("li"),
-          todo = todoList.todos[i]
-
+          todo = todoList.todos[i];
 
       if (todo.completed === false) {
         todoLi.textContent = "[ ] " + todo.todoText;
