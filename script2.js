@@ -112,9 +112,9 @@ var view = {
       var todo = todoList.todos[i];
 
       if (todo.completed === false) {
-        todoLi.textContent = "[ ] " + todo.todoText;
+        todoLi.textContent = "[ ] " + todo.todoText + " ";
       } else {
-        todoLi.textContent = "[X] " + todo.todoText;
+        todoLi.textContent = "[X] " + todo.todoText + " ";
       }
 
       todoLi.id = [i];
@@ -126,8 +126,8 @@ var view = {
   createDeleteBtn: function() {
     var deleteBtn = document.createElement("button");
 
-    deleteBtn.className = "delete_btn"
-    
+    deleteBtn.className = "delete_btn";
+
     deleteBtn.textContent = "Delete";
 
     return deleteBtn;
@@ -136,12 +136,12 @@ var view = {
   setUpEvents: function() {
     var todosUl = document.querySelector("ul");
 
-    todosUl.addEventListener("click", function(evt) {
-      // store element that was clicked on
+    todosUl.addEventListener("click", function (evt) {
       var elementClicked = evt.target;
-      // check if elementClicked is delete button
+
       if (elementClicked.className === "delete_btn") {
-        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+        // W&C says to use parseInt to turn the id into a number, but the function works without coercing it. Also, he uses parentNode instead of parentElement, but from what I've read it shouldn't make a difference in this particular situation.
+        handlers.deleteTodo(elementClicked.parentElement.id);
       }
     });
   }
