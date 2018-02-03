@@ -3,55 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Todo List | Watch and Code</title>
-  <link rel="stylesheet" href="css/meyer_reset2.css">
-  <link rel="stylesheet" href="css/todo_list.css">
+  <link rel="stylesheet" href="css/meyer_reset2.css" />
+  <link rel="stylesheet" href="css/todo_list.css" />
 </head>
 <body>
-  
   <header>
-    <h1>Todo List</h1>
+    <h1>My Todos</h1>
   </header>
-
 
   <main>
     <section>
-      <input type="text" id="add-todo-text-input" name="Add Todo">
-
-      <button class="btn btn_primary" onclick="handlers.addTodo()" for="Add Todo">Add Todo</button>
-    </section>
-
-    <section>
-      <section>
-        <input id="change-todo-position-input" type="number">
-        
-        <input id="change-todo-text-input" type="text">
-      </section>
-
-      <button class="btn btn_secondary" onclick="handlers.changeTodo()">Change Todo</button>
-    </section>
-
-    <section>
-      <input type="number" id="toggle-completed-position-input">
-      <button class="btn btn_secondary" onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <input type="text" name="Add Todo" id="add-todo-text" />
+    
+      <button class="btn btn_primary" id="add-todo-btn" onclick="handlers.addTodo()">Add Todo</button>
     </section>
     
     <section>
-      <button class="btn btn_secondary" onclick="handlers.toggleAll()">Toggle All</button>
+      <input type="number" name="Change Todo Position" id="change-todo-position" />
+      <input type="text" name="Change Todo Text" id="change-todo-text" />
+    
+      <button id="change-todo-btn" class="btn btn_secondary" onclick="handlers.changeTodo()">Change Todo</button>
     </section>
-
-
+    
     <section>
-      <input type="number" id="delete-todo-position-input">
+      <input type="number" name="Toggle Completed" id="toggle-completed-position" />
+    
+      <button class="btn btn_primary" id="toggle-completed-btn" onclick="handlers.toggleCompleted()">Toggle Completed</button>
+    
+      <button class="btn btn_secondary" id="toggle-all-btn" onclick="handlers.toggleAll()">Toggle All</button>
+    </section>
+    
+    <section>
+      <h3></h3>
 
-      <button class="btn btn_delete" onclick="handlers.deleteTodo()">Delete Todo</button>
+      <ul>
+      </ul>
     </section>
   </main>
-
-
-  <aside>
-    <h3></h3>
-    <ul></ul>
-  </aside>
 
   <script type="text/javascript" src="script.js"></script>
 </body>
