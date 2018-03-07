@@ -59,8 +59,31 @@ var todoList = {
   }
 };
 
+
 var handlers = {
   toggleAll: function() {
     todoList.toggleAll();
+  },
+
+  addTodo: function() {
+    var addTodoInput = document.getElementById("add-todo-text");
+
+    todoList.addTodo(addTodoInput.value);
+
+    addTodoInput.value = "";
+  },
+
+  changeTodo: function() {
+    var changeTodoPosition = document.getElementById("change-todo-position");
+    var changeTodoText = document.getElementById("change-todo-text");
+
+    todoList.changeTodo(Number(changeTodoPosition.value), changeTodoText.value);
+
+    changeTodoPosition.value = "";
+    changeTodoText.value = "";
+  },
+
+  deleteTodo: function() {
+    
   }
-}
+};
