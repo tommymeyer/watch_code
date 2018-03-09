@@ -85,10 +85,6 @@ main {
     margin: 0 2.5em 4em; }
     main > section > section {
       margin-bottom: 1.25em; }
-    main > section:first-of-type button:first-of-type {
-      margin-right: 0.5em; }
-    main > section:first-of-type button:last-of-type {
-      margin-left: 0.5em; }
       @media screen and (max-width: 850px) {
         main > section:first-of-type button:last-of-type {
           margin-left: 0; } }
