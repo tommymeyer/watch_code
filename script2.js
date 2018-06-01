@@ -45,10 +45,14 @@ var todoList = {
 
 
 var handlers = {
-  addTodo: function() {
+  addTodo: function(e) {
     var addTodoInput = document.getElementById("add-todo-text");
 
-    if (addTodoInput.value.length > 0) {
+    if (addTodoInput.value.length) {
+      todoList.addTodo(addTodoInput.value);
+    }
+
+    if (addTodoInput.value.length && e.which === 13) {
       todoList.addTodo(addTodoInput.value);
     }
 
@@ -72,7 +76,7 @@ var handlers = {
   toggleCompleted: function () {
     var toggleCompletedPosition = document.getElementById("toggle-completed-position");
 
-    if (toggleCompletedPosition.value.length > 0) {
+    if (toggleCompletedPosition.value.length) {
       todoList.toggleCompleted(Number(toggleCompletedPosition.value));
     }
 
